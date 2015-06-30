@@ -5,45 +5,96 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>我的简历</title>
+	<style type="text/css">
+/* 	.section .photo,.section .name,.section .mail{
+	 position: relative; left: -120%;
+}  */
+	.section2 h4,.section .ability{
+		position: relative; left: -120%;
+	}
+	</style>
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" href="css/jquery.fullPage.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<script src="js/jquery-1.8.3.min.js"></script>
 	<script src="js/jquery.fullPage.min.js"></script>
+	<script src="http://cdn.staticfile.org/jquery-easing/1.3/jquery.easing.min.js"></script>
+
 	<script>
 $(function(){
 	$('#dowebok').fullpage({
-		sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90'],
+		sectionsColor: ['#1bbc9b', '#9C58B6', '#7BAABE', '#ED6461'],
 		anchors: ['page1', 'page2', 'page3', 'page4'],
-		menu: '#menu'
+		menu: '#menu',
+		afterLoad: function(anchorLink, index){
+			if(index == 2){
+				$('.section2').find('h4').delay(100).animate({
+					left: '0'
+				}, 1500, 'easeOutExpo');
+				$('.section2 .ability').delay(100).animate({
+					left: '0'
+				}, 1500, 'easeOutExpo');
+			}
+		},
+		onLeave: function(index, direction){
+			if(index == '2'){
+				$('.section2').find('h4').delay(500).animate({
+					left: '-120%'
+				}, 1500, 'easeOutExpo');
+				$('.section2 .ability').delay(500).animate({
+					left: '-120%'
+				}, 1500, 'easeOutExpo');
+			}
+		}
 	});
 });
 </script>
 </head>
 <body>
 <!-- 导航栏开始 -->
+<div class="menu"></div>
 <ul id="menu">
 	<li data-menuanchor="page1" class="active"><a href="#page1">首页</a></li>
-	<li data-menuanchor="page2"><a href="#page2">擅长技术</a></li>
+	<li data-menuanchor="page2"><a href="#page2">专业技能</a></li>
 	<li data-menuanchor="page3"><a href="#page3">教育背景</a></li>
-	<li data-menuanchor="page4"><a href="#page4">了解更多</a></li>
+	<li data-menuanchor="page4"><a href="#page4">联系我</a></li>
 </ul>
 <!-- 导航栏结束 -->
 	<div id="dowebok">
-	<div class="section">
+	<div class="section section1">
 		<span class="photo"></span>
 		<h3 class="name">陆利舟</h3>
-		<h4>web前端工程师<h4>
-		<p><a href="mailto:1002359548@qq.com" class="highlight">1002359548@qq.com</a></p>
+		<h4>web前端工程师(实习)<h4>
+		<p class="mail"><a href="mailto:1002359548@qq.com" class="highlight">1002359548@qq.com</a></p>
+	</div>
+	<div class="section section2">
+		<h4 class="total">掌握前端技术,熟悉后端知识</h4>
+		<div class="ability">
+			<ul class="clear">
+				<li><a href="javascript:;"><span>HTML</span>
+				<p>熟悉HTML标签，能够利用HTML完成常见网页布局，并熟悉HTML5中的新特性及其用法</p></a></li>
+				<li><a href="javascript:;"><span>CSS</span>
+				<p>熟悉CSS的使用场景，CSS3的新特性，能够利用CSS完成常见效果和布局。</p></a></li>
+				<li><a href="javascript:;"><span>JavaScript</span>
+				<p>熟悉原生的javascript，能够使用原生javascript编写常见的网页交互效果</p></a></li>
+				<li><a href="javascript:;"><span>Bootstrap</span>
+				<p>熟悉Bootstrap这类CSS框架，能够使用其快速开发一些web应用</p></a></li>
+				<li><a href="javascript:;"><span>Java</span>
+				<p>熟悉SSH三大框架，能做简单的网站。</p></a></li>
+				<li><a href="javascript:;"><span>PhotoShop</span>
+				<p>基本操作，会简单的平面设计。</p></a></li>
+
+			</ul>
+		</div>
 	</div>
 	<div class="section">
-		<h3>第二屏</h3>
+		<h4>教育背景</h4>
+		<div class="timebox"><ul><li>2012.09--NOW</li></ul></div>
+		<div class="timeline"></div>
+		<div class="school"><h4>浙江大学宁波理工学院</h4></div>
 	</div>
 	<div class="section">
-		<h3>第三屏</h3>
-	</div>
-	<div class="section">
-		<h3>第四屏</h3>
+		<h4>招我到碗里来吧！</h4>
 	</div>
 </div>
 </body>
