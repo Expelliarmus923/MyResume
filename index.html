@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>我的简历</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery.fullPage.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/jquery.fullPage.min.js"></script>
+	<script>
+$(function(){
+	$('#dowebok').fullpage({
+		sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90'],
+		anchors: ['page1', 'page2', 'page3', 'page4'],
+		menu: '#menu'
+	});
+});
+</script>
+</head>
+<body>
+<!-- 导航栏开始 -->
+<ul id="menu">
+	<li data-menuanchor="page1" class="active"><a href="#page1">首页</a></li>
+	<li data-menuanchor="page2"><a href="#page2">擅长技术</a></li>
+	<li data-menuanchor="page3"><a href="#page3">教育背景</a></li>
+	<li data-menuanchor="page4"><a href="#page4">了解更多</a></li>
+</ul>
+<!-- 导航栏结束 -->
+	<div id="dowebok">
+	<div class="section">
+		<span class="photo"></span>
+		<h3 class="name">陆利舟</h3>
+		<h4>web前端工程师<h4>
+		<p><a href="mailto:1002359548@qq.com" class="highlight">1002359548@qq.com</a></p>
+	</div>
+	<div class="section">
+		<h3>第二屏</h3>
+	</div>
+	<div class="section">
+		<h3>第三屏</h3>
+	</div>
+	<div class="section">
+		<h3>第四屏</h3>
+	</div>
+</div>
+</body>
+</html>

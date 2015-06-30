@@ -1,0 +1,33 @@
+/* 导航栏 */
+#menu { position: fixed; left: 10px; top: 10px; list-style-type: none; z-index: 70;}
+#menu li { float: left; margin:  0 10px 0 0; font-size: 14px;}
+#menu a { float: left; padding: 10px 20px; background-color: #fff; color: #333; text-decoration: none;}
+#menu .active a { color: #fff; background-color: #333;}
+.section{
+	text-align: center; 
+	font: 1.6em "Microsoft Yahei"; 
+	color: #fff;
+}
+h3,h4{
+	margin: 13px 0;
+}
+a.highlight{
+	font-size: 16px;
+	color: #9f3;
+}
+.section .photo{
+	display: block;
+	width: 200px;
+	height: 200px;
+	border-radius: 200px;
+	border:10px solid #aee2d9;
+	margin: 0 auto;
+	overflow: hidden;
+	background:#fff url(../img/Image.png) no-repeat center center;
+}
+.section h3{
+	font-size: 3.5em;
+}
+.section .name{
+	text-shadow: 1px 2px #22c3aa,2px 4px #aee2d9;
+}
