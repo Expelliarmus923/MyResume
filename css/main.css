@@ -44,12 +44,24 @@ body{
 #menu .active a {
 	  color: #9f3;
 }
-
+.download a{
+	display: block;
+	width: 8em;
+	height: 3em;
+	border: 2px solid #fff;
+	font-size: 0.6em;
+	line-height: 3em;
+	margin: 0 auto;
+	color:#fff;
+}
+.download a:hover{
+	color: #1bbc9b;
+	background:#fff;
+}
 h3,h4{
 	margin: 13px 0;
 }
-a.highlight{
-	font-size: 16px;
+.highlight{
 	color: #9f3;
 }
 .section .photo{
