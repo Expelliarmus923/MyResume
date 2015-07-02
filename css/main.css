@@ -3,6 +3,14 @@ body{
 	font: 1.6em "Microsoft Yahei"; 
 	color: #fff;
 }
+/* 动画相关 */
+	.section2 h4,.timebox{
+		position: relative; left: -120%;
+	}
+	.section .ability,.school{
+		position: relative;right: -120%
+	}
+/* 清除浮动 */
 .clear:after{
 		clear: both;
 		display: block;
@@ -76,6 +84,7 @@ h3,h4{
 	margin: 0 auto;
 	overflow: hidden;
 	background:#fff url(../img/Image.png) no-repeat center center;
+	background-size: 200px 200px;
 }
 .section h3{
 	font-size: 3.5em;
