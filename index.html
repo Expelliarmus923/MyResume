@@ -9,16 +9,20 @@
 /* 	.section .photo,.section .name,.section .mail{
 	 position: relative; left: -120%;
 }  */
-	.section2 h4,.section .ability{
+	.section2 h4,.timebox{
 		position: relative; left: -120%;
 	}
+	.section .ability,.school{
+		position: relative;right: -120%
+	}
 	</style>
+	<link rel="shortcut icon" href=" img/favicon.ico" />
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" href="css/jquery.fullPage.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<script src="js/jquery-1.8.3.min.js"></script>
 	<script src="js/jquery.fullPage.min.js"></script>
-	<script src="http://cdn.staticfile.org/jquery-easing/1.3/jquery.easing.min.js"></script>
+	<script src="js/jquery.easing.min.js"></script>
 
 	<script>
 $(function(){
@@ -32,7 +36,15 @@ $(function(){
 					left: '0'
 				}, 1500, 'easeOutExpo');
 				$('.section2 .ability').delay(100).animate({
+					right: '0'
+				}, 1500, 'easeOutExpo');
+			}
+			if(index == '3'){
+				$('.timebox').delay(500).animate({
 					left: '0'
+				}, 1500, 'easeOutExpo');
+				$('.school').delay(500).animate({
+					right: '0'
 				}, 1500, 'easeOutExpo');
 			}
 		},
@@ -42,7 +54,15 @@ $(function(){
 					left: '-120%'
 				}, 1500, 'easeOutExpo');
 				$('.section2 .ability').delay(500).animate({
+					right: '-120%'
+				}, 1500, 'easeOutExpo');
+			}
+			if(index == '3'){
+				$('.timebox').delay(500).animate({
 					left: '-120%'
+				}, 1500, 'easeOutExpo');
+				$('.school').delay(500).animate({
+					right: '-120%'
 				}, 1500, 'easeOutExpo');
 			}
 		}
@@ -65,7 +85,7 @@ $(function(){
 		<span class="photo"></span>
 		<h3 class="name">陆利舟</h3>
 		<h4>web前端工程师(实习)<h4>
-		<div class="download"><a href="">下载我的简历</a></div>
+		<div class="download"><a href="doc/前端工程师（实习）_陆利舟_浙江大学宁波理工学院_15726816341.doc">下载我的简历</a></div>
 	</div>
 	<div class="section section2">
 		<h4 class="total">掌握前端技术,熟悉后端知识</h4>
@@ -88,7 +108,6 @@ $(function(){
 		</div>
 	</div>
 	<div class="section">
-		<h4>教育背景</h4>
 		<div class="timebox"><ul><li>2012.09--NOW</li></ul></div>
 		<div class="timeline"></div>
 		<div class="school"><h4>浙江大学宁波理工学院</h4></div>
@@ -96,6 +115,11 @@ $(function(){
 	<div class="section">
 		<h4>招我到碗里来吧！</h4>
 		<p class="highlight">1002359548@qq.com</p>
+		<ul class="content">
+			<li><a href="http://expelliarmus923.github.io" class="blog">个人博客</a></li>
+			<li><a href="https://github.com/Expelliarmus923" class="github">github</a></li>
+		</ul>
+
 	</div>
 </div>
 </body>
