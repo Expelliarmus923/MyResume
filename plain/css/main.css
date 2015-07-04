@@ -1,0 +1,190 @@
+*{
+	color: #fff;
+}
+body{
+	  font-size: 16px;
+	  font-family: 'Microsoft Yahei','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+.clear_fix:after{
+		clear: both;
+		display: block;
+		visibility: hidden;
+		height: 0;
+		line-height: 0;
+		content: "";
+	}
+section{
+	width: 100%;
+	min-height: 700px;
+	position: relative;
+}
+/* button */
+h4{
+	text-align: center;
+}
+.download a{
+	display: inline-block;
+	border: 2px solid #fff;
+	font-size: 25px;
+	padding: 20px;
+	color:#fff;
+	text-align: center;
+}
+.download a:hover{
+	color: #1bbc9b;
+	background:#fff;
+}
+/* banner */
+
+.banner{
+	background: #1bbc9b;
+
+}
+.scroll i{
+	width:48px;
+	height: 48px; 
+	position: absolute;
+	left: 50%;
+	margin-left: -24px;
+	bottom: 5%;
+	background:url(../img/bwn.png) no-repeat center center;
+	cursor: pointer;
+}
+section .photo{
+	display: block;
+	width: 200px;
+	height: 200px;
+	border-radius: 200px;
+	border:10px solid #aee2d9;
+	overflow: hidden;
+	background:#fff url(../img/Image.png) no-repeat center center;
+	background-size: 200px 200px;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	margin: -110px 0 0  -110px;
+}
+section .name{
+	text-align: center;
+	font-size: 5em;
+	text-shadow: 1px 2px #22c3aa,2px 4px #aee2d9;
+	padding-top: 25%
+}
+.banner .job{
+	font-size: 2em;
+	text-align: center;
+	margin: 40px 0;
+}
+/* menu */
+.menu{
+	position: fixed;
+	width: 100%;
+	height: 52px;
+	z-index: 70;
+	background: #000;
+	opacity: 0.6;
+}
+
+
+#menu{
+	position: fixed;
+	width: 100%;
+	height: 52px;
+	margin: 0 auto;
+	z-index: 80;
+	background: #333;
+}
+#menu .logo {
+	margin-left: 12%;
+	width: 200px;
+	height: 100%;
+	float: left;
+	cursor: pointer;
+}
+#menu ul{
+	width: 50%;
+	height: 100%;
+	margin-left: 55%;
+}
+#menu ul li{
+	display: inline-block;
+	float: left;
+	margin: 0 8% 0 0;
+}
+#menu ul li a{
+	font-size: 14px;
+	line-height:52px;
+}
+#menu .logo p{
+	font-size: 1.9em;
+	line-height:52px;
+}
+#menu a:hover{
+	  color: #999;
+}
+/* about */
+.about{
+	background-color: #1889C5;
+}
+section>h2{
+  	font-size: 40px;
+ 	margin-top: 2.5em;
+  	margin: 0;
+  	padding: 2em 0 1em 0;
+	text-align: center;
+}
+.brief{
+	width: 1000px;
+	margin: 100px auto 0 auto; 
+}
+.brief li{
+	padding: 5px;
+}
+.brief li span{
+	display: inline-block;
+	text-align: right;
+	width: 70px;
+}
+/* skill */
+.skill{
+	background-color: #9C58B6;
+}
+.cirle{
+	width: 1000px;
+	margin: 20px auto 0 auto;
+}
+.example-container{
+		display: inline-block;
+		width: 200px;
+		height:200px;
+		position: relative;
+		margin-left: 45px;
+		}
+.progressbar-text{
+		position: absolute; 
+		top: 50%; left: 50%; 
+		padding: 0px; 
+		margin: 0px; 
+		-webkit-transform: translate(-50%, -50%); 
+		transform: translate(-50%, -50%); 
+		color: rgb(252, 176, 60);
+		font-size: 25px;
+}
+.text{
+	display: block;
+	width: 100%;
+	position: absolute; 
+	bottom: -30%;
+	left: 0;
+	font-size: 26px;
+	text-align: center;
+	color: rgb(252, 176, 60);
+}
+/* work */
+.work{
+	background: #364B5F;
+}
+/* contact */
+.contact{
+	background: #E74D3D;
+}

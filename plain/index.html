@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我的简历</title>
+	<link rel="shortcut icon" href=" img/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="js/progressbar.min.js"></script>
+		<script type="text/javascript">
+		window.onload=function(){
+			var color=['#1BBC9D','#E74D3D','#2ACB6E','#F1C410'];
+			addCircle("js",60,'#1BBC9D');
+			addCircle("html",90,'#2ACB6E');
+			addCircle("css",80,'#E74D3D');
+			addCircle("photoshop",80,'#F1C410');
+			addColor(color);
+		}
+		function addCircle(id,number,iColor){
+			var circle = new ProgressBar.Circle("#"+id, {
+				color: iColor,
+				strokeWidth: 3,
+				trailWidth: 1,
+				duration: 1500*number*0.01,
+				text: {
+				value: '0'
+				},
+			step: function(state, bar) {
+				bar.setText((bar.value() * 100).toFixed(0));
+			}
+			});
+
+				circle.animate(number*0.01)
+		}
+		function addColor(color){
+			var circle=document.getElementById("cirle");
+			var p=circle.getElementsByTagName("p");
+			for(var i=0,j=0;i<p.length;i++){
+				if(p[i].className=="text"){
+					p[i].style.color=color[j];
+					j++;
+				}
+			}
+		}
+		</script>
+</head>
+<body>
+	<div class="menu"></div>
+	<div id="menu">
+	<div class="logo"><p>Resume</p></div>
+	<ul class="clear_fix">
+	<li class="active"><a href="#page1">个人简介</a></li>
+	<li><a href="#page2">专业技能</a></li>
+	<li><a href="#page3">部分作品</a></li>
+	<li><a href="#page4">联系邮箱</a></li>
+	</ul>
+	</div>
+	<section class="banner">
+		<span class="photo"></span>
+		<h3 class="name">陆利舟</h3>
+		<h4 class="job">web前端工程师(实习)<h4>
+		<div class="download"><a href="doc/前端工程师（实习）_陆利舟_浙江大学宁波理工学院_15726816341.doc">下载我的简历</a></div>
+		<div class="scroll"><i></i></div>
+	</section>
+	<section class="about">
+		<h2>个人简介</h2>
+		<div class="intro">
+			<ul class="brief">
+				<li><span>姓名</span>&nbsp;&nbsp;|&nbsp;&nbsp;陆利舟</li>
+				<li><span>手机</span>&nbsp;&nbsp;|&nbsp;&nbsp;15726816341</li>
+				<li><span>邮箱</span>&nbsp;&nbsp;|&nbsp;&nbsp;1002359548@qq.com</li>
+				<li><span>所在地</span>&nbsp;&nbsp;|&nbsp;&nbsp;浙江——宁波</li>
+				<li><span>Github</span>&nbsp;&nbsp;|&nbsp;&nbsp;点击进入</li>
+				<li><span>Blog</span>&nbsp;&nbsp;|&nbsp;&nbsp;点击进入</li>
+			</ul>
+		</div>
+		<div class="scroll"><i></i></div>
+	</section>
+	<section class="skill">
+		<h2>专业技能</h2>
+		<div class="cirle" id="cirle">
+		<div class="example-container" id="html"><p class="progressbar-text"></p><p class="text">HTML</p></div>
+		<div class="example-container" id="css"><p class="progressbar-text"></p><p class="text">CSS</p></div>
+		<div class="example-container" id="js"><p class="progressbar-text"></p><p class="text">JavaScript</p></div>
+		<div class="example-container" id="photoshop"><p class="progressbar-text"></p><p class="text">PhotoShop</p></div>
+		</div>
+		<div class="scroll"><i></i></div>
+	</section>
+	<section class="work"><div class="scroll"><i></i></div></section>
+	<section class="contact"><div class="scroll"><i></i></div></section>
+</body>
+</html>
