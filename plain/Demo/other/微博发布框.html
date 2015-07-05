@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>微博发布框</title>
+	<style type="text/css">
+	.showText {
+		width: 400px;
+		height: 400px;
+		border: 2px solid #666;
+		background: #fff;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	.showText .text{
+		width: 392px;
+		height: auto;
+		border-bottom: 1px dashed #999;
+		padding: 4px;
+		overflow: hidden;
+		opacity: 0;
+	}
+	</style>
+	<script src="move.js"></script>
+	<script type="text/javascript">
+	window.onload=function(){
+		var oShowText=document.getElementById("showText");
+		var time=null;
+		var text=["onload事件会在页面或图像加载完成后立即发生。语法onload=\"SomeJavaScriptCode\"参数描述 SomeJavaScriptCode必需。","- 现在很流行微信网页小游戏,用html5制作的小游戏移过来,可以放到微信浏览器中打开,关键是可以做成微信分享朋友圈的形式,大大提高游戏的传播,增强好友的"," 很多时候,我们需要模拟微信内置浏览器,今天教大家用chrome简单模拟。如图设置: F12或者右键审查元素进入开发者模式,点击Emulation,然后点击Network,把Spoof user agent改","近日,全新QQ浏览器9.0重磅上线,产品除了在速度与稳定性上取得大幅提升,还将支持Chrome应用中心的海量扩展。对此,QQ浏览器产品负责人表示,“用户可以"]
+		
+		var oBtn=document.getElementById("btn");
+		var i=0;
+		timer =setInterval(addHtml,2000);
+		function addHtml(){
+			//为inserBefor新建htmlobject
+			var div=document.createElement("div");
+			div.className="text";
+			div.innerText=text[i]
+
+			var oText=oShowText.getElementsByTagName("div");
+			if(oText.length){
+				oShowText.insertBefore(div,oText[0]);
+			}
+			else{
+				oShowText.appendChild(div);
+			}
+			//oText是动态获取值，因此这里调oText[0]可以调用
+			var iHeight=oText[0].offsetHeight;
+			oText[0].style.height=0;
+			fnStartRun(oText[0],{height:iHeight},function(){
+				fnStartRun(oText[0],{opacity:100})
+			});
+			i++;
+			if(i>=text.length){
+				i=0;
+			}
+		}
+	}
+	</script>
+</head>
+<body>
+	<div class="showText" id="showText">
+	</div>
+	<button id="btn">加载</button>
+</body>
+</html>

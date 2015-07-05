@@ -1,0 +1,41 @@
+h1{
+	color: white;
+	font-size: 25px;
+	text-align: center;
+}
+
+/*
+	设置按钮样式
+*/
+.button{
+		width: 140px;
+		line-height: 38px;
+		font-weight: bold;
+		color: white;
+		font-family: "微软雅黑"；
+		text-shadow:1px 1px 1px #333;
+		border-radius: 5px;
+		margin:0 20px 20px 0;
+		position: relative;
+		overflow: hidden;
+		text-align:center;
+		}
+  .button.red{
+		border:1px solid #b42323;
+		box-shadow: 0 1px 2px #e99494 inset,0 -1px 0 #954b4b inset,0 -2px 3px #e99494 inset;
+		background: -webkit-linear-gradient(top,#d53939,#b92929);
+		background: -moz-linear-gradient(top,#d53939,#b92929);
+		background: linear-gradient(top,#d53939,#b92929);
+		}
+	.red:hover{
+	    background: -webkit-linear-gradient(top,#eb6f6f,#c83c3c);
+	    background: -moz-linear-gradient(top,#eb6f6f,#c83c3c);
+	    background: linear-gradient(top,#eb6f6f,#c83c3c);
+	}
+	.red:active{
+	    top:1px;
+	    box-shadow: 0 1px 3px #5b0505 inset,0 3px 0 #333;
+	    background: -webkit-linear-gradient(top,#b11a1a,#bf2626);
+	    background: -moz-linear-gradient(top,#b11a1a,#bf2626);
+	    background: linear-gradient(top,#b11a1a,#bf2626);
+	}
